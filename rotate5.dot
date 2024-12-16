@@ -1,0 +1,13 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x607d79d3b240 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{0:\l|  %1 = alloca i32, align 4\l  %2 = alloca i32, align 4\l  %3 = alloca i32, align 4\l  store i32 0, ptr %1, align 4\l  store i32 0, ptr %2, align 4\l  store i32 0, ptr %3, align 4\l  %indvar.load = load i32, ptr %3, align 4\l  %guard.cond = icmp slt i32 %indvar.load, 4\l  br i1 %guard.cond, label %4, label %11\l|{<s0>T|<s1>F}}"];
+	Node0x607d79d3b240:s0 -> Node0x607d79d3b360;
+	Node0x607d79d3b240:s1 -> Node0x607d79d3de30;
+	Node0x607d79d3b360 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{4:\l|  %5 = load i32, ptr %3, align 4\l  %6 = load i32, ptr %2, align 4\l  %7 = add nsw i32 %6, %5\l  store i32 %7, ptr %2, align 4\l  br label %8\l}"];
+	Node0x607d79d3b360 -> Node0x607d79d3e1b0;
+	Node0x607d79d3e1b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{8:\l|  %9 = load i32, ptr %3, align 4\l  %10 = add nsw i32 %9, 1\l  store i32 %10, ptr %3, align 4\l  %latchindvar.load = load i32, ptr %3, align 4\l  %latchguard.cond = icmp slt i32 %latchindvar.load, 4\l  br i1 %latchguard.cond, label %4, label %11\l|{<s0>T|<s1>F}}"];
+	Node0x607d79d3e1b0:s0 -> Node0x607d79d3b360;
+	Node0x607d79d3e1b0:s1 -> Node0x607d79d3de30;
+	Node0x607d79d3de30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70" fontname="Courier",label="{11:\l|  %12 = load i32, ptr %1, align 4\l  ret i32 %12\l}"];
+}
