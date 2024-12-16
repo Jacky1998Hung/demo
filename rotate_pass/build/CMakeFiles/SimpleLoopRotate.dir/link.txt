@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -fno-rtti  -Wl,--gc-sections -shared  -o SimpleLoopRotate.so CMakeFiles/SimpleLoopRotate.dir/SimpleLoopRotate.cpp.o   -L/home/r2-d2/Jacky/llvm-project/.my_build/./lib  -Wl,-rpath,"\$ORIGIN/../lib:/home/r2-d2/Jacky/llvm-project/.my_build/./lib:" 

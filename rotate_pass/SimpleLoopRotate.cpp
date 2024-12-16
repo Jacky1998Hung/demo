@@ -65,9 +65,9 @@ Value* ReturnInductionVariable(Instruction *Terminator) {
         }
     } else {
         errs() << "Header does not contain a conditional branch!\n";
-    }
-
-}
+    	}
+    return nullptr;
+}    
 
 void CheckLoopBlocks(Loop *L) {
     // Step 1: Get the loop header
@@ -283,9 +283,9 @@ private:
 
             return true;
 */
-		
+	return true;	
     }
-};
+    };
 }
 
 // Registration of the pass
